@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_apis",
+  "info": {
+    "singularName": "blog-api",
+    "pluralName": "blog-apis",
+    "displayName": "blogApi"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
