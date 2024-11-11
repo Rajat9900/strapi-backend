@@ -9,7 +9,7 @@ module.exports = {
   async register(ctx) {
     const { username, email, password, isAdmin } = ctx.request.body;
 
-    // Check if user already exists
+
     const existingUser = await strapi.query('plugin::users-permissions.user').findOne({ where: { email } });
 
     if (existingUser) {
@@ -32,7 +32,7 @@ if (isAdmin === true) {
       },
     });
 
-    // Generate JWT token
+
     const token = jwt.sign({ id: user.id }, strapi.config.get('plugin.users-permissions.jwtSecret'), {
       expiresIn: strapi.config.get('plugin.users-permissions.jwtExpiration'),
     });
